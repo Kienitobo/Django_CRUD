@@ -4,6 +4,9 @@ from django.views import generic
 from .models import Post
 
 # Create your views here.
+class PostListView(generic.ListView):
+    model=Post
+    
 class PostCreateView(generic.CreateView):
     model=Post
     fields="__all_"
